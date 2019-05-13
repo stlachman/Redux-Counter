@@ -17,13 +17,14 @@ class Counter extends Component {
         // Fill in the two button onClick methods
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
+        console.log(this.props)
         return (
             <p>
                 Clicked: {this.props.count} times
-                 <button onClick={() => console.log('click plus')}>
+                 <button onClick={() => this.props.increment()}>
                     +
                 </button>
-                <button onClick={() => console.log('click minus')}>
+                <button onClick={() => this.props.decrement()}>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
